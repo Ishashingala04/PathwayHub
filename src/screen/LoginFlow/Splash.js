@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
-import { SafeAreaView, StyleSheet, Text } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
+import LottieView from 'lottie-react-native';
 
 function Splash({ navigation }) {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            navigation.replace('Type'); // navigate to Home after 2 seconds
-        }, 1000);
+            navigation.replace('onboarding'); // navigate to Home after 2 seconds
+        }, 3000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -15,9 +16,13 @@ function Splash({ navigation }) {
         <>
             <SafeAreaView style={{ flex: 1 }}>
 
-                <LinearGradient colors={['#0f3057', '#057d8c']} style={style.loginBox} start={{ x: 0.5, y: 0 }} end={{ x: 0.5, y: 1 }}>
-                    {/* <Text style={style.loginText}>Login</Text> */}
-                </LinearGradient>
+                {/* <LinearGradient colors={['#0f3057', '#057d8c']} style={style.loginBox} start={{ x: 0.5, y: 0 }} end={{ x: 0.5, y: 1 }}> */}
+
+                    <View style={style.lottie}>
+                        <LottieView source={require('../LoginFlow/images/logo1.json')} autoPlay loop style={{ width: 250, height: 250 }} speed={1} />
+                    </View>
+
+                {/* </LinearGradient> */}
             </SafeAreaView>
         </>
     )
@@ -37,5 +42,12 @@ const style = StyleSheet.create({
         borderColor: '#246AA4',
         elevation: 2
     },
+    lottie: {
+        height: "100%",
+        width: "100%",
+        justifyContent: "center",
+        alignItems: 'center',
+
+    }
 })
 export default Splash
