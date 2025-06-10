@@ -1,62 +1,84 @@
-import React from 'react'
-import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import LottieView from 'lottie-react-native';
+import React, { useState } from 'react'
+import { Pressable, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function Types({ navigation }) {
+
     return (
         <>
-            <SafeAreaView style={{ flex: 1 }}>
+            <SafeAreaView style={{ flex: 1, justifyContent: 'center' }}>
 
-                <View style={style.lottie}>
-                    <LottieView source={require('../LoginFlow/images/onboard2.json')} autoPlay loop style={{ width: 300, height: 300 }} speed={1} />
+                <View style={style.maincontainer}>
+
+                    <View>
+                        <Text style={style.text}>Welcome Back</Text>
+                    </View>
+                    <View>
+                        <Text style={{ padding: 10, fontSize: 18, color: '#a2a1a8', top: 15 }}>Sign In With As A</Text>
+                    </View>
+
+                    {/* User filed */}
+                    <View style={{ paddingHorizontal: 10, padding: 20 }}>
+
+                        <View style={{ margin: 5 }}>
+                            <View style={{ margin: 15 }}>
+                                <TouchableOpacity style={style.signbtn} onPress={() => navigation.navigate('login', { userType: 'Teacher' })}>
+                                    <Text style={style.signtxt}>I'm a Teacher</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+
+                        <View style={{ margin: 5 }}>
+                            <View style={{ margin: 15 }}>
+                                <TouchableOpacity style={style.signbtn} onPress={() => navigation.navigate('login', { userType: 'Student' })}>
+                                    <Text style={style.signtxt}>I'm a Student</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+
+                    </View>
+
                 </View>
-
-                <View style={{bottom:15}} >
-                    <Text style={style.text}>Sign In With</Text>
-                </View>
-
-                <View style={{ padding: 10 }}>
-                    <Pressable style={style.button}>
-                        <Text style={style.btntxt}>As A Teacher</Text>
-                    </Pressable>
-
-                    <Pressable style={style.button}>
-                        <Text style={style.btntxt}>As A Student</Text>
-                    </Pressable>
-                </View>
-
             </SafeAreaView>
         </>
     )
 }
 
 const style = StyleSheet.create({
-    lottie: {
-        height: 500,
-        width: 400,
-        justifyContent: "center",
-        alignItems: 'center',
-
+    maincontainer: {
+        justifyContent: 'center',
+        margin: 20,
     },
     text: {
         fontSize: 23,
         color: 'black',
-        textAlign: 'center',
         letterSpacing: 1,
-        fontWeight:'800'
+        fontWeight: '600',
+        padding: 10,
+        top: 15
     },
-    button: {
-        marginVertical: 10,
-        marginHorizontal: 25,
+    inputContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderWidth: 1,
+        borderColor: 'black',
+        borderRadius: 20,
+        paddingVertical: 4,
+        paddingHorizontal: 10,
+        marginVertical: 10
+    },
+    input: {
+        width: '90%',
+    },
+    signbtn: {
+        borderRadius: 15,
         backgroundColor: '#1b385c',
-        padding: 15,
-        borderRadius: 10
+        padding: 13
     },
-    btntxt: {
-        fontSize: 18,
+    signtxt: {
         color: 'white',
-        textAlign: 'center',
-        letterSpacing: 1
-    }
+        fontSize: 16,
+        textAlign: "center"
+    },
 })
 export default Types;
