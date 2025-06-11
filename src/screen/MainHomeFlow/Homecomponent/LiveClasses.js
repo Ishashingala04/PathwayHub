@@ -14,6 +14,25 @@ export default function LiveClasses() {
           <Text style={{ color: '#fff' }}>Join</Text>
         </TouchableOpacity>
       </View>
+
+      <View style={styles.liveClass}>
+        <View>
+          <Text style={styles.classTitle}>📘 Geometry Class</Text>
+          <Text>10 June, 10:00 AM</Text>
+        </View>
+        <TouchableOpacity style={styles.joinButton}>
+          <Text style={{ color: '#fff' }}>Join</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.liveClass}>
+        <View>
+          <Text style={styles.classTitle}>📘 Geometry Class</Text>
+          <Text>10 June, 10:00 AM</Text>
+        </View>
+        <TouchableOpacity style={styles.joinButton}>
+          <Text style={{ color: '#fff' }}>Join</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }
