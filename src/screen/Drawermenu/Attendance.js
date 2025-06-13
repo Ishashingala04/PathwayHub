@@ -1,12 +1,12 @@
 import React from 'react'
 import { Text } from 'react-native'
 
-function Activity() {
+function Attendance() {
     return (
         <>
-            <Text>Activity</Text>
+            <Text>Hello</Text>
         </>
     )
 }
 
-export default Activity
+export default Attendance

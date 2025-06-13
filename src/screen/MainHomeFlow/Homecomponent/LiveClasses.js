@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 8,
     elevation: 3,
+    margin: 8
   },
   classTitle: {
     fontWeight: '600',

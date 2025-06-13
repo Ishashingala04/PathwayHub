@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { Pressable, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import React from 'react'
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 function Types({ navigation }) {
 

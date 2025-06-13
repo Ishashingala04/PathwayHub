@@ -3,7 +3,7 @@ import { Pressable, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity,
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function Login({ route, navigation }) {
-    const { userType } = route.params; // Get userType from navigation params
+    const { userType } = route.params; 
     const [mobileNo, setMobileNo] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
