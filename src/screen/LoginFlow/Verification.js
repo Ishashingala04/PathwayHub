@@ -8,7 +8,7 @@ function Verification({ navigation }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             navigation.replace('home'); // navigate to Home after 2 seconds
-        }, 2000);
+        }, 1000);
         return () => clearTimeout(timer);
     }, []);
 

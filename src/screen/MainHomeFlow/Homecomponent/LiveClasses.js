@@ -4,7 +4,9 @@ import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-na
 export default function LiveClasses() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.heading}>Live Classes</Text>
+      <View style={{ paddingHorizontal: 8 }}>
+        <Text style={styles.heading}>Live Classes</Text>
+      </View>
       <View style={styles.liveClass}>
         <View>
           <Text style={styles.classTitle}>📘 Geometry Class</Text>

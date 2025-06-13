@@ -8,7 +8,9 @@ function InchargeSection() {
       <SafeAreaView style={styles.container}>
         {/* Class Incharge Section */}
         <View style={{ marginBottom: 10 }}>
-          <Text style={styles.heading}>Class incharge</Text>
+          <View style={{ paddingHorizontal: 8 }}>
+            <Text style={styles.heading}>Class incharge</Text>
+          </View>
           <View style={styles.boxRow}>
             <Pressable style={styles.classbox}>
               <View style={styles.iconTextContainer}>
@@ -61,11 +63,13 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     fontSize: 16,
     marginBottom: 10,
+
   },
   headerRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingHorizontal: 8
   },
   seeAll: {
     color: '#88888a',
@@ -79,7 +83,7 @@ const styles = StyleSheet.create({
   classbox: {
     backgroundColor: '#eadfd9',
     width: '45%',
-    padding: 20,
+    padding: 18,
     borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'center',

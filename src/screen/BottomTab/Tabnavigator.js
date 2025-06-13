@@ -15,6 +15,7 @@ function Tabnavigator() {
                 screenOptions={{
                     tabBarStyle: {
                         backgroundColor: '#fff',
+                        height:55,
                         borderTopLeftRadius: 50,
                         borderTopRightRadius: 50,
                         paddingTop: 5,
