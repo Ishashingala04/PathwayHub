@@ -7,6 +7,7 @@ import Types from '../screen/LoginFlow/Types';
 import Login from '../screen/LoginFlow/Login';
 import Verification from '../screen/LoginFlow/Verification';
 import Tabnavigator from '../screen/BottomTab/Tabnavigator';
+import DrawerNavigator from './DrawerNavigator';
 
 
 
@@ -23,7 +24,7 @@ function Appnavigator() {
                     <Stack.Screen name="type" component={Types} options={{ headerShown: false }} />
                     <Stack.Screen name="login" component={Login} options={{ headerShown: false }} />
                     <Stack.Screen name="verify" component={Verification} options={{ headerShown: false }} />
-                    <Stack.Screen name="home" component={Tabnavigator} options={{ headerShown: false }} />
+                    <Stack.Screen name="home" component={DrawerNavigator} options={{ headerShown: false }} />
                 </Stack.Navigator>
             </NavigationContainer>
     )

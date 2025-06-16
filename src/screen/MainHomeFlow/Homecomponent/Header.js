@@ -1,14 +1,18 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function Header({ title = "Default Title" }) {
+
+    const navigation = useNavigation(); // ✅ Hook to get navigation
+
     return (
         <>
             <SafeAreaView>
 
                 <View style={styles.header}>
-                    <TouchableOpacity >
+                    <TouchableOpacity onPress={() => navigation.openDrawer()}>
                         <Ionicons name="menu" size={24} color="#fff" />
                     </TouchableOpacity>
                     <Text style={styles.title}>{title}</Text>
