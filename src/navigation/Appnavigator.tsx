@@ -8,6 +8,7 @@ import Login from '../screen/LoginFlow/Login';
 import Verification from '../screen/LoginFlow/Verification';
 import Tabnavigator from '../screen/BottomTab/Tabnavigator';
 import DrawerNavigator from './DrawerNavigator';
+import ViewAttendance from '../screen/Drawermenu/ViewAttendance';
 
 
 
@@ -25,6 +26,7 @@ function Appnavigator() {
                     <Stack.Screen name="login" component={Login} options={{ headerShown: false }} />
                     <Stack.Screen name="verify" component={Verification} options={{ headerShown: false }} />
                     <Stack.Screen name="home" component={DrawerNavigator} options={{ headerShown: false }} />
+                    <Stack.Screen name="viewattendance" component={ViewAttendance} options={{ headerShown: false }} />
                 </Stack.Navigator>
             </NavigationContainer>
     )

@@ -18,8 +18,8 @@ import Tabnavigator from '../screen/BottomTab/Tabnavigator';
 import Attendance from '../screen/Drawermenu/Attendance';
 
 // Add your other screens here
-const Drawer = createDrawerNavigator();     
-
+const Drawer = createDrawerNavigator();
+0
 const CustomDrawerContent = ({ navigation }) => {
     const menuItems = [
         { name: 'Dashboard', icon: <MaterialIcons name="dashboard" size={18} color="#6d515b" />, screen: 'Dashboard' },
