@@ -9,6 +9,8 @@ import Verification from '../screen/LoginFlow/Verification';
 import Tabnavigator from '../screen/BottomTab/Tabnavigator';
 import DrawerNavigator from './DrawerNavigator';
 import ViewAttendance from '../screen/Drawermenu/ViewAttendance';
+import Assignment from '../screen/Drawermenu/Assignment';
+import CreateAssignmnet from '../screen/Drawermenu/CreateAssignmnet';
 
 
 
@@ -27,6 +29,7 @@ function Appnavigator() {
                     <Stack.Screen name="verify" component={Verification} options={{ headerShown: false }} />
                     <Stack.Screen name="home" component={DrawerNavigator} options={{ headerShown: false }} />
                     <Stack.Screen name="viewattendance" component={ViewAttendance} options={{ headerShown: false }} />
+                    <Stack.Screen name="createaasignment" component={CreateAssignmnet} options={{ headerShown: false }} />
                 </Stack.Navigator>
             </NavigationContainer>
     )
