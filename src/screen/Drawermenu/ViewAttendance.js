@@ -41,7 +41,7 @@ const ViewAttendance = () => {
             {/* Header */}
             <View style={styles.header}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Ionicons name="close" size={24} color="#fff" />
+                    <Ionicons name="arrow-back" size={24} color="#fff" />
                 </TouchableOpacity>
                 <Text style={styles.headerTitle}>View attendance</Text>
                 <View style={{ width: 24 }} />
