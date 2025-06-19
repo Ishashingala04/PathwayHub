@@ -16,6 +16,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 // Screens
 import Tabnavigator from '../screen/BottomTab/Tabnavigator';
 import Attendance from '../screen/Drawermenu/Attendance';
+import Assignment from '../screen/Drawermenu/Assignment';
 
 // Add your other screens here
 const Drawer = createDrawerNavigator();
@@ -25,7 +26,7 @@ const CustomDrawerContent = ({ navigation }) => {
         { name: 'Dashboard', icon: <MaterialIcons name="dashboard" size={18} color="#6d515b" />, screen: 'Dashboard' },
         { name: 'Attendance', icon: <Ionicons name="calendar-outline" size={18} color="#6d515b" />, screen: 'Attendance' },
         { name: 'Class Test', icon: <MaterialIcons name="assignment" size={18} color="#6d515b" />, screen: 'Dashboard' },
-        { name: 'Assignment', icon: <MaterialIcons name="assignment-turned-in" size={18} color="#6d515b" />, screen: 'Dashboard' },
+        { name: 'Assignment', icon: <MaterialIcons name="assignment-turned-in" size={18} color="#6d515b" />, screen: 'Assignment' },
         { name: 'Communication', icon: <Ionicons name="logo-wechat" size={18} color="#6d515b" />, screen: 'Dashboard' },
         { name: 'Exams', icon: <MaterialIcons name="description" size={18} color="#6d515b" />, screen: 'Dashboard' },
         { name: 'Time Table', icon: <FontAwesome5 name="clock" size={16} color="#6d515b" />, screen: 'Dashboard' },
@@ -80,6 +81,7 @@ export default function DrawerNavigator() {
         >
             <Drawer.Screen name="Dashboard" component={Tabnavigator} />
             <Drawer.Screen name="Attendance" component={Attendance} />
+            <Drawer.Screen name="Assignment" component={Assignment} />
         </Drawer.Navigator>
     );
 }
